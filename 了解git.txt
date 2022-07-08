@@ -91,5 +91,6 @@ git config --global --unset https.proxy
 完整格式为：git pull <远程主机名> <远程分支名>:<本地分支名>
 如：git pull origin next:master
 如果远程分支是与当前分支合并，则冒号后面的部分可以省略。
+20、git clone 远程仓库地址。将远程仓库中的文件给保存到本地中。
 
 
