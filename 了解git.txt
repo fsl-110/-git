@@ -96,4 +96,29 @@ git config --global --unset https.proxy
 相同点：都是从远程服务器拉取代码到本地
 不同点：git clone是在本地没有版本库的时候，从远程服务器克隆整个版本库到本地，是一个本地从无到有的过程。git pull
 在本地有版本库的情况下，从远程库获取最新commit 数据（如果有的话），并merge（合并）到本地。
+21、git提交代码时遇到代码库有更新以及本地有更新的解决方法
+  1.输入 git status 查看本地的修改
+
+  2.输入git stash 隐藏掉本地修改
+
+  3.输入 git pull 从代码库拉取更新
+
+  4.输入 git stash pop stash@{版本号}
+
+  5.然后再git add git commit git push 就行了
+  git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。
+  git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。
+  
+22、在git push之前并没有看代码库的提交记录，导致同事做了修改我不知道，但是我已经执行了git add 和 git commit 这个时候怎么撤销掉git commit 呢？
+  1.先复制你本地的项目到另外一个文件夹
+
+  2.输入 git log 查看commit日志，找到最新的提交的commit_id
+
+  3.输入git reset --hard commit_id 回退到某一版本
+
+  4.再把刚才的项目复制过来
+
+  5.执行 上面的2 3 4  5步骤就可以了
+
+
 
