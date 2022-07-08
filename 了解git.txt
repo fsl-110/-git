@@ -87,5 +87,9 @@ git push 远程仓库名称 远程仓库的分支名称master or main
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
+19、git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。
+完整格式为：git pull <远程主机名> <远程分支名>:<本地分支名>
+如：git pull origin next:master
+如果远程分支是与当前分支合并，则冒号后面的部分可以省略。
 
 
