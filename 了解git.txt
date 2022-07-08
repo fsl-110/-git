@@ -91,6 +91,9 @@ git config --global --unset https.proxy
 完整格式为：git pull <远程主机名> <远程分支名>:<本地分支名>
 如：git pull origin next:master
 如果远程分支是与当前分支合并，则冒号后面的部分可以省略。
-20、git clone 远程仓库地址。将远程仓库中的文件给保存到本地中。
 
+20、git clone 和git pull的区别：
+相同点：都是从远程服务器拉取代码到本地
+不同点：git clone是在本地没有版本库的时候，从远程服务器克隆整个版本库到本地，是一个本地从无到有的过程。git pull
+在本地有版本库的情况下，从远程库获取最新commit 数据（如果有的话），并merge（合并）到本地。
 
